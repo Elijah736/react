@@ -1,0 +1,29 @@
+.h1element {
+  font: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: crimson;
+}
+
+.h2element{
+  font: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: crimson;
+}
+
+.container{
+  text-align: center;
+  border: 1px solid hsl(348, 83%, 20%);
+  border-radius: 5px;
+  padding: 20px;
+  justify-content: center;
+}
+
+button{
+  background-color: crimson;
+  color: white;
+  width: 300px;
+  padding: 5px;
+}
+

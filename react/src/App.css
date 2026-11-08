@@ -18,6 +18,7 @@
   border-radius: 5px;
   padding: 20px;
   justify-content: center;
+  display: flex;
 }
 
 button{
@@ -26,4 +27,9 @@ button{
   width: 300px;
   padding: 5px;
 }
+
+.button-container{
+  gap: 10px;
+}
+
 

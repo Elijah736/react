@@ -1,30 +1,66 @@
-.counter-container{
-  justify-content: center;
-  text-align: center;
-  border: 1px solid blue;
-  background-color: blue;
-  color: white;
-  padding: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body{
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
-.button-container{
-  display: flex;
+.timer-container{
   justify-content: center;
-  gap: 10px;
+  font-family: monospace;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  padding: 200px;
+  border: none;
 }
 
 button{
-  background-color: hsl(348, 79%, 65%);
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: white;
-  font-weight: 800;
-  transition: background-color 0.3s ease;
+  padding: 20px;
+  width: 200px;
+  border-radius: 25px;
 }
 
-button:hover{
-  background-color: hsl(348, 91%, 33%);
+.buttoncontainer{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.start{
+  background-color: rgb(2, 248, 2);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
+}
+
+.start:hover{
+  background-color: hsl(120, 98%, 17%);
+  cursor: pointer;
+}
+
+.reset{
+  background-color: blue;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
+}
+
+.reset:hover{
+  background-color: rgb(1, 1, 87);
+  cursor: pointer;
+}
+
+.stop{
+  background-color: red;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
+}
+
+.stop:hover{
+  background-color: rgb(79, 1, 1);
   cursor: pointer;
 }

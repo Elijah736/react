@@ -22,7 +22,7 @@ function App() {
           setMinutes(0);
           setHours(prev => prev + 1)
         }
-      }, 10);
+      }, 1000);
 
       return () => clearTimeout(timeout);
 

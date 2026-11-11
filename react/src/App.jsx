@@ -1,53 +1,30 @@
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState } from "react";
 import './App.css';
 
 function App() {
+  const[count, setCount] = useState(0);
 
-  const [isRunning, setisRunning] = useState(false);
-  const [Seconds, setSeconds] = useState(0);
-  const [Minutes, setMinutes] = useState(0);
-  const [Hours, setHours] = useState(0);
+  function Increase() {
+    setCount(count + 1)
+  }
 
-  useEffect(() => {
-    if (isRunning) {
-      const timeout = setTimeout(() => {
-        if (Seconds === 59) {
-          setSeconds(0);
-          setMinutes(prev => prev + 1)
-        } else {
-          setSeconds(prev => prev + 1)
-        } 
-
-        if (Minutes === 59) {
-          setMinutes(0);
-          setHours(prev => prev + 1)
-        }
-      }, 1000);
-
-      return () => clearTimeout(timeout);
-
-    };
-  
-
-  }, [isRunning, Seconds, Minutes]);
-
-
-
-
+  function Decrease() {
+    setCount(prevCount => prevCount > 0 ? prevCount -1 : 0)
+  }
 
   return (
-    <div className='timer-container'>
-      <h1>Timer Application</h1>
+    <div className="counter-container">
+      <h1 className="h1element">Counter Application</h1>
 
-      <h2>{Hours.toString().padStart(2, 0)}:{Minutes.toString().padStart(2, 0)}:{Seconds.toString().padStart(2, 0)}</h2>
+      <h2 className="h2element">{count}</h2>
 
-      <div className='buttoncontainer'>
-        <button className='start'onClick={() => setisRunning(true)}>Start</button>
-        <button className='reset' onClick={() => setSeconds(0) || setMinutes(0) || setHours(0)}>Reset</button>
-        <button className='stop' onClick={() => setisRunning(false)}>Stop</button>
+      <div className="button-container">
+        <button onClick={Increase} className="increasebutton">+1</button>
+        <button onClick={Decrease} className="decreasebutton">-1</button>
       </div>
     </div>
   )
-}   
+}
 
 export default App;
